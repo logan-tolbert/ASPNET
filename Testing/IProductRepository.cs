@@ -1,9 +1,9 @@
-﻿using static Testing.Models;
+﻿using Testing.Models;
 
 namespace Testing
 {
     public interface IProductRepository
     {
-        IEnumerable<ProductModel> GetAllProducts();
+        IEnumerable<Product> GetAllProducts();
     }
 }
