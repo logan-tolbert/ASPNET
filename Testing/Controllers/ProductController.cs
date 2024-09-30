@@ -4,18 +4,18 @@ namespace Testing.Controllers
 {
     public class ProductController : Controller
     {
-        private readonly IProductRepository _repo;
+        private readonly IProductRepository repo;
 
         public ProductController(IProductRepository repo)
         {
-            this._repo = repo;
+            this.repo = repo;
         }
 
         
         public IActionResult Index()
         {
-            var products = _repo.GetAllProducts();
-            return View();
+            var products = repo.GetAllProducts();
+            return View(products);
         }
     }
 }
